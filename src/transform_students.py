@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load raw student data
-df = pd.read_csv("../data/students.csv")
+df = pd.read_csv("data/students.csv")
 
 # Classify student performance
 def classify_mark(mark):
@@ -15,7 +15,7 @@ def classify_mark(mark):
 df["performance"] = df["mark"].apply(classify_mark)
 
 # Save transformed data
-df.to_csv("../data/student_performance.csv", index=False)
+df.to_csv("data/student_performance.csv", index=False)
 
 print("Transformation complete.")
 print(df.head())
